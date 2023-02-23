@@ -32,4 +32,6 @@ if [ -d "/var/lib/mysql" ]; then
 fi
 
 becho "Making backups immutable"
+chown -R root:root /var/backups/*
+chmod -R 400 /var/backups/*
 chattr +i -R /var/backups/*
